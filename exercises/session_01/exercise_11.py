@@ -1,0 +1,11 @@
+"""Print a multiplication table from 1 to 10."""
+
+
+def main() -> None:
+    number = int(input("Nhap so nguyen n: "))
+    for multiplier in range(1, 11):
+        print(f"{number} x {multiplier} = {number * multiplier}")
+
+
+if __name__ == "__main__":
+    main()

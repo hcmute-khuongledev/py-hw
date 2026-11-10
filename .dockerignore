@@ -1,0 +1,12 @@
+.venv/
+.git/
+.vscode/
+.agents/
+.codex/
+.aws/
+**/__pycache__/
+**/*.py[cod]
+**/.ipynb_checkpoints/
+.env
+.env.*
+outputs/
