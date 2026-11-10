@@ -2,7 +2,7 @@
 
 
 def main() -> None:
-    number = int(input("Nhap so nguyen n: "))
+    number = int(input("Enter integer n: "))
     for multiplier in range(1, 11):
         print(f"{number} x {multiplier} = {number * multiplier}")
 

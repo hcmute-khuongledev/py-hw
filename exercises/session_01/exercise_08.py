@@ -2,7 +2,7 @@
 
 
 def main() -> None:
-    x = int(input("Nhap so nguyen x: "))
+    x = int(input("Enter integer x: "))
     print(x**8 - 5 + abs(x))
 
 

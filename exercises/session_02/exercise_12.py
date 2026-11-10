@@ -2,13 +2,13 @@
 
 
 def main() -> None:
-    a, b = map(int, input("Nhap 2 so nguyen a b: ").split())
+    a, b = map(int, input("Enter two integers a and b separated by spaces: ").split())
     if b == 0:
-        print("Khong the kiem tra bang phep chia du khi b = 0.")
+        print("Cannot check using the modulo operator when b is zero.")
     elif a % b == 0:
-        print(f"{a} la boi so cua {b}")
+        print(f"{a} is a multiple of {b}")
     else:
-        print(f"{a} la KHONG boi so cua {b}")
+        print(f"{a} is NOT a multiple of {b}")
 
 
 if __name__ == "__main__":

@@ -2,13 +2,13 @@
 
 
 def main() -> None:
-    year = int(input("Nhap nam duong lich: "))
+    year = int(input("Enter a Gregorian calendar year: "))
     if year <= 0:
-        print("Nam phai la so nguyen duong.")
+        print("The year must be a positive integer.")
     elif year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
-        print(f"{year} la nam nhuan.")
+        print(f"{year} is a leap year.")
     else:
-        print(f"{year} khong la nam nhuan.")
+        print(f"{year} is not a leap year.")
 
 
 if __name__ == "__main__":

@@ -2,13 +2,13 @@
 
 
 def main() -> None:
-    year = int(input("Nhap nam duong lich: "))
+    year = int(input("Enter a Gregorian calendar year: "))
     if year <= 0:
-        print("Nam phai la so nguyen duong.")
+        print("The year must be a positive integer.")
         return
     day = (year + (year - 1) // 4 - (year - 1) // 100 + (year - 1) // 400) % 7
-    weekdays = ("Chu nhat", "Thu hai", "Thu ba", "Thu tu", "Thu nam", "Thu sau", "Thu bay")
-    print(f"Ngay 01/01/{year} la {weekdays[day]}.")
+    weekdays = ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Tuesdayy")
+    print(f"January 1, {year} is {weekdays[day]}.")
 
 
 if __name__ == "__main__":

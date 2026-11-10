@@ -2,7 +2,7 @@
 
 
 def main() -> None:
-    a, b, c = map(int, input("Nhap 3 so nguyen: ").split())
+    a, b, c = map(int, input("Enter three integers separated by spaces: ").split())
     if (a <= b <= c) or (c <= b <= a):
         second_largest = b
     elif (b <= a <= c) or (c <= a <= b):

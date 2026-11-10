@@ -2,7 +2,7 @@
 
 
 def main() -> None:
-    number = float(input("Nhap so thuc: "))
+    number = float(input("Enter a real number: "))
     print(int(number))
 
 

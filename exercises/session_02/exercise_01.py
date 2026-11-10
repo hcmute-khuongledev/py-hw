@@ -2,7 +2,7 @@
 
 
 def main() -> None:
-    grade = input("Nhap diem chu: ").strip().upper()
+    grade = input("Enter a letter grade: ").strip().upper()
     if grade == "A+" or grade == "A":
         points = 4.0
     elif grade == "A-":
@@ -26,9 +26,9 @@ def main() -> None:
     elif grade == "F":
         points = 0.0
     else:
-        print("Yeu cau nhap lai.")
+        print("Invalid grade. Please enter a valid letter grade.")
         return
-    print(f"Diem so: {points:.1f}")
+    print(f"Grade points: {points:.1f}")
 
 
 if __name__ == "__main__":

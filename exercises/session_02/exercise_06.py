@@ -2,7 +2,7 @@
 
 
 def main() -> None:
-    a, b, c, d, e = map(float, input("Nhap 5 so thuc: ").split())
+    a, b, c, d, e = map(float, input("Enter five real numbers separated by spaces: ").split())
     print(f"Max: {max(a, b, c, d, e):g}")
     print(f"Min: {min(a, b, c, d, e):g}")
 

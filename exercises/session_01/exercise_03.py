@@ -2,7 +2,7 @@
 
 
 def main() -> None:
-    number = abs(int(input("Nhap so nguyen co 3 chu so: ")))
+    number = abs(int(input("Enter a three-digit integer: ")))
     hundreds = number // 100
     tens = number // 10 % 10
     units = number % 10

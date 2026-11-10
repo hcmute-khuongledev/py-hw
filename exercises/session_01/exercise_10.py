@@ -2,11 +2,11 @@
 
 
 def main() -> None:
-    character = input("Nhap mot ky tu: ")
+    character = input("Enter one character: ")
     if len(character) == 1:
         print(character)
     else:
-        print("Vui long nhap dung mot ky tu.")
+        print("Please enter exactly one character.")
 
 
 if __name__ == "__main__":

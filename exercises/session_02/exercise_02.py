@@ -6,9 +6,9 @@ BONUS_BASE = 2400
 
 
 def main() -> None:
-    rating = float(input("Nhap gia tri danh gia: "))
+    rating = float(input("Enter a performance rating: "))
     if not isfinite(rating):
-        print("Vui long nhap lai.")
+        print("Invalid rating. Please enter 0.0, 0.4, or a finite value of at least 0.6.")
         return
     if rating == 0.0:
         meaning = "Unacceptable Performance"
@@ -17,10 +17,10 @@ def main() -> None:
     elif rating >= 0.6:
         meaning = "Meritorious Performance"
     else:
-        print("Vui long nhap lai.")
+        print("Invalid rating. Please enter 0.0, 0.4, or a finite value of at least 0.6.")
         return
     print(meaning)
-    print(f"Tien thuong: ${BONUS_BASE * rating:.2f}")
+    print(f"Bonus: ${BONUS_BASE * rating:.2f}")
 
 
 if __name__ == "__main__":

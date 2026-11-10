@@ -2,13 +2,13 @@
 
 
 def main() -> None:
-    a, b, c = map(int, input("Nhap 3 so nguyen: ").split())
+    a, b, c = map(int, input("Enter three integers separated by spaces: ").split())
     largest = None
     for number in (a, b, c):
         if number % 2 == 0 and (largest is None or number > largest):
             largest = number
     if largest is None:
-        print("Khong co so chan.")
+        print("No even numbers found.")
     else:
         print(largest)
 

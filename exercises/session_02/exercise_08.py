@@ -2,11 +2,11 @@
 
 
 def main() -> None:
-    month = int(input("Nhap thang: "))
+    month = int(input("Enter a month number: "))
     if 1 <= month <= 12:
-        print("Thang hop le.")
+        print("Valid month.")
     else:
-        print("Thang khong hop le.")
+        print("Invalid month.")
 
 
 if __name__ == "__main__":

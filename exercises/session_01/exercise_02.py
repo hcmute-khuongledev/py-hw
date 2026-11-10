@@ -2,9 +2,9 @@
 
 
 def main() -> None:
-    first, second, third = map(int, input("Nhap 3 so nguyen, cach nhau bang dau cach: ").split())
+    first, second, third = map(int, input("Enter three integers separated by spaces: ").split())
     average = (first + second + third) / 3
-    print(f"Gia tri trung binh: {average:.1f}")
+    print(f"Average: {average:.1f}")
 
 
 if __name__ == "__main__":

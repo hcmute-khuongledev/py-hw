@@ -2,7 +2,7 @@
 
 
 def main() -> None:
-    x = float(input("Nhap so thuc x: "))
+    x = float(input("Enter real number x: "))
     if x > 0:
         result = x**2 + 3 * x + 5
     else:

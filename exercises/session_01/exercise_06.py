@@ -2,7 +2,7 @@
 
 
 def main() -> None:
-    number = int(input("Nhap so nguyen k: "))
+    number = int(input("Enter integer k: "))
     print(number - 1, number + 1)
 
 

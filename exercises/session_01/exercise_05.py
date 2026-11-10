@@ -2,7 +2,7 @@
 
 
 def main() -> None:
-    first, second = map(int, input("Nhap 2 so nguyen: ").split())
+    first, second = map(int, input("Enter two integers separated by spaces: ").split())
     first, second = second, first
     print(first, second)
 
