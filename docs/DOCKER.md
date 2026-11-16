@@ -38,8 +38,7 @@ docker compose run --rm python
 Chạy bài cụ thể:
 
 ```sh
-docker compose run --rm python python exercises/session_01/exercise_01.py
-docker compose run --rm python python exercises/session_01/exercise_02.py
+docker compose run --rm python python exercise/homework/session_01/main.py
 ```
 
 `python` đầu tiên là tên service trong Compose; `python` thứ hai là chương trình trong container. `--rm` xóa container sau khi chạy xong. Source và kết quả lưu trong project vẫn còn.
@@ -47,7 +46,7 @@ docker compose run --rm python python exercises/session_01/exercise_02.py
 Bài dùng `input()` cho phép nhập trực tiếp trong terminal. Khi truyền dữ liệu qua pipe hoặc chạy trong CI, thêm `-T`. Ví dụ PowerShell:
 
 ```powershell
-"An" | docker compose run --rm -T python python exercises/session_01/exercise_01.py
+"An" | docker compose run --rm -T python python exercise/homework/session_01/main.py
 ```
 
 Mở Python tương tác hoặc shell trong container:
@@ -73,11 +72,10 @@ docker exec -it py-hw sh
 Trong shell container, chạy bằng lệnh Python thông thường:
 
 ```sh
-python exercises/session_01/exercise_01.py
-python exercises/session_02/exercise_15.py
-cd /app/exercises/session_02
-python exercise_08.py
-python exercise_10.py
+python exercise/homework/session_01/main.py
+python exercise/homework/session_02/main.py
+cd /app/exercise/homework/session_02
+python main.py
 ```
 
 Nhập dữ liệu rồi nhấn Enter theo yêu cầu từng bài. Để mở Python tương tác, gõ `python`; gõ `exit()` để quay lại shell.
@@ -102,7 +100,7 @@ Source và kết quả trong thư mục project vẫn được giữ lại. Khi 
 ## 4. Quy trình làm bài
 
 1. Bật Docker.
-2. Thêm hoặc sửa bài trong `exercises/session_XX/`.
+2. Thêm hoặc sửa bài trong `exercise/homework/session_XX/`.
 3. Chạy bài bằng lệnh ở trên, thay đường dẫn bằng file cần chạy.
 4. Xem kết quả trong terminal hoặc `outputs/`.
 
@@ -142,7 +140,7 @@ Nếu không dùng Compose:
 ```sh
 docker build -t py-hw .
 docker run --rm py-hw
-docker run --rm -it py-hw python exercises/session_01/exercise_01.py
+docker run --rm -it py-hw python exercise/homework/session_01/main.py
 ```
 
 Cách này chạy source đã copy vào image khi build. Cần build lại khi sửa source; kết quả chỉ lưu trong container sẽ mất khi container bị xóa. Dùng Compose để đồng bộ source và kết quả với máy.
@@ -154,7 +152,7 @@ Cách này chạy source đã copy vào image khi build. Cần build lại khi s
 - **ModuleNotFoundError**: thêm thư viện vào `requirements.txt` rồi build lại.
 - **Không tải được image/thư viện**: kiểm tra mạng, proxy/VPN rồi thử build lại.
 - **Lỗi gắn thư mục trên Windows**: kiểm tra quyền chia sẻ thư mục/ổ đĩa trong Docker Desktop. Compose dùng `.:/app` để tránh phải nhập đường dẫn tuyệt đối chứa khoảng trắng hoặc tiếng Việt.
-- **File kết quả thuộc root trên Linux**: từ shell Linux, có thể dùng `docker compose run --rm --user "$(id -u):$(id -g)" python python exercises/session_01/exercise_02.py`. Cú pháp này không dùng trong PowerShell.
+- **File kết quả thuộc root trên Linux**: từ shell Linux, có thể dùng `docker compose run --rm --user "$(id -u):$(id -g)" python python exercise/homework/session_01/main.py`. Cú pháp này không dùng trong PowerShell.
 
 ### Lỗi `failed to fetch anonymous token` / `wsarecv`
 
