@@ -132,6 +132,6 @@ Nếu file bài tập nằm sâu hơn một cấp, điều chỉnh `parents` tư
 
 - [Session 01 — Các khái niệm cơ bản](exercise/homework/session_01/README.md)
 - [Session 02 — Kiểu dữ liệu và rẽ nhánh](exercise/homework/session_02/README.md)
-- [Session 03 — Vòng lặp và danh sách (24 câu)](exercise/homework/session_03/README.md)
+- [Session 03 — Vòng lặp và danh sách (26 câu)](exercise/homework/session_03/README.md)
 
 Chạy menu bài 3 trong container: `python exercise/homework/session_03/main.py`.

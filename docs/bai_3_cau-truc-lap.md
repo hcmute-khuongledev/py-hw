@@ -160,3 +160,23 @@ Enter the next y-coordinate: 1
 Enter the next x-coordinate (blank to quit):
 The perimeter of that polygon is 3.414213562373
 ```
+
+### Bài 25
+
+Parity bit là một cơ chế đơn giản để phát hiện các lỗi trong việc truyền dữ liệu thông qua một đường truyền không đáng tin cậy như đường dây điện thoại. Ý tưởng rất đơn giản đó là một bit sẽ được thêm vào và truyền đi sau mỗi một nhóm 8-bit dữ liệu. Vì thế một bit lỗi trên đường truyền có thể được phát hiện dễ dàng. Bit parity có thể được tính toán cho cả trường hợp parity là chẵn hoặc lẻ. Nếu là parity chẵn thì tổng số bit 1 được truyền, gồm 8 bit dữ liệu và 1 bit parity phải là số chẵn. Ngược lại, khi chọn bit parity lẻ thì tổng số bit 1 truyền đi sẽ là lẻ.
+
+Viết chương trình tính bit parity của một nhóm 8 bit nhị phân được nhập bởi người dùng sử dụng parity chẵn. Chương trình sẽ đọc chuỗi nhị phân gồm 8 bit cho đến khi nhập khoảng trắng. Sau mỗi chuỗi được nhập vào bởi người dùng, chương trình cần hiển thị một thông điệp chỉ ra rằng người dùng muốn tính parity chẵn hay lẻ. Một thông điệp cảnh báo sẽ được hiển thị nếu người dùng nhập một chuỗi nhị phân có hơn 8 bit.
+
+### Bài 26
+
+Viết chương trình thực hiện chuyển đổi số thập phân thành nhị phân. Với số nguyên thập phân do người dùng nhập vào từ bàn phím hãy sử dụng phép chia được minh họa sau đây để thực hiện việc chuyển đổi. Khi chương trình chuyển đổi được hoàn tất, kết quả in ra màn hình sẽ chứa một chuỗi các bit nhị phân tương ứng với số thập phân mà người dùng nhập.
+
+```text
+Ban đầu cho chuỗi rỗng result
+Cho q là thể hiện của số cần chuyển đổi
+Repeat
+    Cho r bằng với phần dư của phép chia q với 2
+    Chuyển r thành chuỗi và cộng r với phần bắt đầu của result
+    Thực hiện chia q với 2, loại bỏ phần dư, và lưu phần nguyên của phép chia vào chính q
+Until q bằng 0
+```

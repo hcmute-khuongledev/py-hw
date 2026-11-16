@@ -329,6 +329,46 @@ def exercise_24():
     print(f"Perimeter: {perimeter:.12f}")
 
 
+def exercise_25():
+    while True:
+        binary = input("Enter 8 binary digits (blank to finish): ").strip()
+        if not binary:
+            return
+        if len(binary) != 8 or any(bit not in "01" for bit in binary):
+            print("Invalid data. Enter exactly 8 bits using only 0 and 1.")
+            continue
+        while True:
+            parity = input("Choose parity: even or odd (Enter for even): ").strip().lower()
+            if not parity:
+                parity = "even"
+            if parity in ("even", "odd"):
+                break
+            print("Invalid parity. Please enter even or odd.")
+        ones = 0
+        for bit in binary:
+            if bit == "1":
+                ones += 1
+        parity_bit = ones % 2
+        if parity == "odd":
+            parity_bit = 1 - parity_bit
+        print(f"Parity mode: {parity}")
+        print(f"Parity bit: {parity_bit}")
+        print(f"Transmitted bits: {binary}{parity_bit}")
+
+
+def exercise_26():
+    number = read_integer("Enter a nonnegative decimal integer: ", 0)
+    quotient = number
+    result = ""
+    while True:
+        remainder = quotient % 2
+        result = str(remainder) + result
+        quotient //= 2
+        if quotient == 0:
+            break
+    print(f"Binary: {result}")
+
+
 EXERCISES = {
     "1": ('Count even and odd digits', exercise_01),
     "2": ('Nearest perfect square', exercise_02),
@@ -354,6 +394,8 @@ EXERCISES = {
     "22": ('Newton square root', exercise_22),
     "23": ('Binary to decimal', exercise_23),
     "24": ('Polygon perimeter', exercise_24),
+    "25": ('Parity bit for 8-bit data', exercise_25),
+    "26": ('Decimal to binary', exercise_26),
 }
 
 

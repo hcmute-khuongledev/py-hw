@@ -2,7 +2,7 @@
 
 Đề bài: [Bài 3 — Cấu trúc lặp](../../../docs/bai_3_cau-truc-lap.md).
 
-Toàn bộ 24 lời giải và menu nằm trong `main.py`, mỗi câu là một hàm `exercise_XX()`. Lời nhắc và kết quả trong chương trình dùng tiếng Anh.
+Toàn bộ 26 lời giải và menu nằm trong `main.py`, mỗi câu là một hàm `exercise_XX()`. Lời nhắc và kết quả trong chương trình dùng tiếng Anh.
 
 ## Chạy chương trình
 
@@ -18,7 +18,7 @@ Hoặc chạy từ terminal trên máy tại thư mục gốc project:
 docker compose run --rm python python exercise/homework/session_03/main.py
 ```
 
-Nhập số câu từ `1` đến `24` để chạy. Kết thúc câu sẽ quay lại menu; nhập `0` tại menu để thoát. Các câu có số `0` làm dấu kết thúc chỉ kết thúc câu đang chạy. Các câu nhập nhiều số liên tiếp đọc mỗi số trên một dòng; câu 18–20 nhập danh sách trên một dòng, cách nhau bằng khoảng trắng.
+Nhập số câu từ `1` đến `26` để chạy. Kết thúc câu sẽ quay lại menu; nhập `0` tại menu để thoát. Các câu có số `0` làm dấu kết thúc chỉ kết thúc câu đang chạy. Các câu nhập nhiều số liên tiếp đọc mỗi số trên một dòng; câu 18–20 nhập danh sách trên một dòng, cách nhau bằng khoảng trắng.
 
 ## Cách giải
 
@@ -49,6 +49,8 @@ Nhập số câu từ `1` đến `24` để chạy. Kết thúc câu sẽ quay l
 | 23 | Duyệt chuỗi nhị phân, cập nhật `decimal = decimal * 2 + digit`, kiểm tra chỉ chứa 0 và 1. |
 | 24 | Cộng khoảng cách giữa các đỉnh liên tiếp, cuối cùng cộng cạnh từ đỉnh cuối về đỉnh đầu; in các đỉnh và chu vi. |
 
+| 25 | Đếm bit 1 trong 8 bit dữ liệu. Parity chẵn bằng số bit 1 `% 2`; parity lẻ bằng `1 - parity_chẵn`. Lặp đọc chuỗi đến khi gặp dòng trống. |
+| 26 | Chia nguyên liên tiếp cho 2, thêm phần dư vào đầu chuỗi kết quả; thực hiện ít nhất một lần để 0 được chuyển thành `0`. |
 ## Quy ước và điểm chưa rõ trong đề
 
 - Câu 05 dùng N nguyên dương vì yêu cầu liệt kê các số nguyên từ 1 đến N.
@@ -69,3 +71,9 @@ Nhập số câu từ `1` đến `24` để chạy. Kết thúc câu sẽ quay l
 - Câu 11–12: nhập lần lượt `3`, `8`, `-2`, `7`, `-5`, `1`, `0` → tổng dương 19, có 2 số âm.
 - Câu 21: `5` → `[2, 3, 5, 7, 11]`.
 - Câu 24: các đỉnh `(0, 0)`, `(1, 0)`, `(0, 1)` → chu vi `3.414213562373`.
+- Câu 25: đề vừa nhắc dùng parity chẵn vừa nhắc chọn chẵn/lẻ. Lời giải cho chọn `even` hoặc `odd`, nhấn Enter mặc định `even`. Chuỗi phải có đúng 8 ký tự `0`/`1`; cảnh báo cả khi thiếu bit, thừa bit hoặc có ký tự khác. Dòng trống hoặc toàn khoảng trắng ở bước nhập chuỗi sẽ quay về menu.
+- Câu 26: dùng số nguyên không âm, số âm phải nhập lại. Không dùng `bin()` vì đề yêu cầu thuật toán chia cho 2. Không biểu diễn số âm theo mã bù hai vì đề không quy định số bit.
+
+Ví dụ câu 25: `00000001` → parity chẵn `1`, parity lẻ `0`; `00000000` → parity chẵn `0`.
+
+Ví dụ câu 26: `0` → `0`, `13` → `1101`, `255` → `11111111`.
